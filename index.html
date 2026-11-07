@@ -439,7 +439,7 @@ legend{font-family:var(--f-display);font-weight:800;font-size:22px;text-transfor
 <!-- TECH -->
 <section class="tech" id="tech">
   <div class="hot" id="hot">
-    <img src="img/tech-float.jpg" alt="Doudoune Frost 01 bleu glacier en lévitation devant des blocs de glace" loading="lazy">
+    <img src="tech-float.jpg" alt="Doudoune Frost 01 bleu glacier en lévitation devant des blocs de glace" loading="lazy">
     <div class="tech-copy rv">
       <span class="mono" style="opacity:.8">Frost 01 · Fiche technique</span>
       <h2 class="disp">Il fait −20.<br>Toi, tu restes <em>calme.</em></h2>
@@ -472,7 +472,7 @@ legend{font-family:var(--f-display);font-weight:800;font-size:22px;text-transfor
 
 <!-- ALTITUDE -->
 <section class="alti" id="alti" aria-label="L'univers B-Ice">
-  <img class="mtn-img" id="mtnImg" src="img/mountain.jpg" alt="Sommets enneigés au-dessus des nuages" loading="lazy">
+  <img class="mtn-img" id="mtnImg" src="mountain.jpg" alt="Sommets enneigés au-dessus des nuages" loading="lazy">
   <div class="mtn-scrim"></div>
   <div class="wrap alti-in">
     <span class="mono" style="opacity:.75">B-Ice · Né dans le froid</span>
@@ -519,7 +519,7 @@ legend{font-family:var(--f-display);font-weight:800;font-size:22px;text-transfor
       <p class="nl-ok" id="nlOk" hidden></p>
     </div>
     <div class="drop-ph rv">
-      <img src="img/noirtotal.jpg" alt="" loading="lazy">
+      <img src="noirtotal.jpg" alt="" loading="lazy">
       <div class="lock"><div><span class="mono">Accès réservé</span><br><b>NOIR<br>TOTAL II</b></div></div>
     </div>
   </div>
@@ -611,39 +611,39 @@ const $ = s => document.querySelector(s);
 
 /* ---------------- catalogue ---------------- */
 const P = {
-  frost:   {name:'Frost 01',   price:349, img:'img/frost.jpg',   th:'img/frost_t.jpg',   cat:'doudoune', sub:'Doudoune brillante oversize', col:['#9fb6d0','#e8eef5'], badge:'Nouveau', sizes:['S','M','L','XL'], off:[],
+  frost:   {name:'Frost 01',   price:349, img:'frost.jpg',   th:'frost_t.jpg',   cat:'doudoune', sub:'Doudoune brillante oversize', col:['#9fb6d0','#e8eef5'], badge:'Nouveau', sizes:['S','M','L','XL'], off:[],
             eye:'Drop 01 · Glace', tag:'La doudoune brillante bleu glacier. Capuche XXL, col montant, volume oversize.', specs:'Duvet 750 cuin · Nylon ripstop brillant · Garantie 2 ans', bg:'#8ea6c0'},
-  noir:    {name:'Noir',       price:369, img:'img/noir.jpg',    th:'img/noir_t.jpg',    cat:'doudoune', sub:'Doudoune mate grand froid', col:['#16181d','#2a3346'], badge:'Best-seller', sizes:['S','M','L','XL'], off:['S'],
+  noir:    {name:'Noir',       price:369, img:'noir.jpg',    th:'noir_t.jpg',    cat:'doudoune', sub:'Doudoune mate grand froid', col:['#16181d','#2a3346'], badge:'Best-seller', sizes:['S','M','L','XL'], off:['S'],
             eye:'Drop 01 · Nuit', tag:'Noire, mate, intraitable. Notre doudoune la plus chaude, avec cagoule intégrée au col.', specs:'Duvet 800 cuin · Toile mate déperlante · Notre plus chaude', bg:'#2c374a'},
-  cobalt:  {name:'Cobalt',     price:389, img:'img/cobalt.jpg',  th:'img/cobalt_t.jpg',  cat:'ensemble', sub:'Ensemble doudoune + cargo', col:['#2547d0','#1a2f8a'], badge:'Édition limitée', sizes:['S','M','L','XL'], off:[],
+  cobalt:  {name:'Cobalt',     price:389, img:'cobalt.jpg',  th:'cobalt_t.jpg',  cat:'ensemble', sub:'Ensemble doudoune + cargo', col:['#2547d0','#1a2f8a'], badge:'Édition limitée', sizes:['S','M','L','XL'], off:[],
             eye:'Drop 01 · Électrique', tag:'Le bleu qui se voit à 100 mètres. Doudoune vernie et cargo assorti, du col aux chevilles.', specs:'Nylon verni · Cargo 6 poches · Série numérotée', bg:'#3f5fbf'},
-  ash:     {name:'Ash Sherpa', price:329, img:'img/ash.jpg',     th:'img/ash_t.jpg',     cat:'doudoune', sub:'Doudoune bouclette grise', col:['#8b919b','#c9ccd2'], badge:'', sizes:['S','M','L','XL'], off:['XL'],
+  ash:     {name:'Ash Sherpa', price:329, img:'ash.jpg',     th:'ash_t.jpg',     cat:'doudoune', sub:'Doudoune bouclette grise', col:['#8b919b','#c9ccd2'], badge:'', sizes:['S','M','L','XL'], off:['XL'],
             eye:'Drop 01 · Brume', tag:'Bouclette épaisse, toucher peluche, chaleur de doudoune. Le gris qui va avec tout.', specs:'Sherpa 420 g/m² · Doublure matelassée · Zip double sens', bg:'#6f7f93'},
-  glacier: {name:'Glacier Set',price:549, img:'img/glacier.jpg', th:'img/glacier_t.jpg', cat:'ensemble', sub:'Doudoune + cargo vernis', col:['#a9c0da','#eef3f8'], badge:'', sizes:['S','M','L','XL'], off:[]},
-  noirtotal:{name:'Noir Total',price:589, img:'img/noirtotal.jpg',th:'img/noirtotal_t.jpg',cat:'ensemble', sub:'Look complet tout noir', col:['#121418'], badge:'Nouveau', sizes:['S','M','L','XL'], off:[]},
-  whiteout:{name:'Whiteout',   price:459, img:'img/whiteout.jpg',th:'img/whiteout_t.jpg',cat:'combi',    sub:'Combinaison de ski isolée', col:['#b8bdc4','#e3e6ea'], badge:'', sizes:['S','M','L','XL'], off:['S']},
-  teddy:   {name:'Polar Teddy',price:299, img:'img/teddy.jpg',   th:'img/teddy_t.jpg',   cat:'ensemble', sub:'Ensemble sherpa blanc', col:['#f1efe8','#d9d6cc'], badge:'Nouveau', sizes:['XS','S','M','L','XL'], off:[]},
-  skybib:  {name:'Sky Bib',    price:219, img:'img/skybib.jpg',  th:'img/skybib_t.jpg',  cat:'combi',    sub:'Salopette de ski imperméable', col:['#9cc0e8','#f4f6f9'], badge:'', sizes:['XS','S','M','L','XL'], off:['XS']},
+  glacier: {name:'Glacier Set',price:549, img:'glacier.jpg', th:'glacier_t.jpg', cat:'ensemble', sub:'Doudoune + cargo vernis', col:['#a9c0da','#eef3f8'], badge:'', sizes:['S','M','L','XL'], off:[]},
+  noirtotal:{name:'Noir Total',price:589, img:'noirtotal.jpg',th:'noirtotal_t.jpg',cat:'ensemble', sub:'Look complet tout noir', col:['#121418'], badge:'Nouveau', sizes:['S','M','L','XL'], off:[]},
+  whiteout:{name:'Whiteout',   price:459, img:'whiteout.jpg',th:'whiteout_t.jpg',cat:'combi',    sub:'Combinaison de ski isolée', col:['#b8bdc4','#e3e6ea'], badge:'', sizes:['S','M','L','XL'], off:['S']},
+  teddy:   {name:'Polar Teddy',price:299, img:'teddy.jpg',   th:'teddy_t.jpg',   cat:'ensemble', sub:'Ensemble sherpa blanc', col:['#f1efe8','#d9d6cc'], badge:'Nouveau', sizes:['XS','S','M','L','XL'], off:[]},
+  skybib:  {name:'Sky Bib',    price:219, img:'skybib.jpg',  th:'skybib_t.jpg',  cat:'combi',    sub:'Salopette de ski imperméable', col:['#9cc0e8','#f4f6f9'], badge:'', sizes:['XS','S','M','L','XL'], off:['XS']},
   // accessories
-  bootW:   {name:'Blizzard Boot Blanc', price:189, img:'img/boot-white.jpg', th:'img/boot-white.jpg', sub:'Boot cuir imperméable', col:['#f4f6f9','#1a1d22'], sizes:['39','40','41','42','43','44','45','46'], off:['39','46'], badge:'Nouveau'},
-  bootB:   {name:'Blizzard Boot Noir',  price:189, img:'img/boot-black.jpg', th:'img/boot-black.jpg', sub:'Boot cuir crantée', col:['#1a1d22','#f4f6f9'], sizes:['39','40','41','42','43','44','45','46'], off:[], badge:''},
-  bootC:   {name:'Blizzard Boot Cobalt',price:199, img:'img/boot-cobalt.jpg',th:'img/boot-cobalt.jpg',sub:'Boot nubuck bleu électrique', col:['#2547d0'], sizes:['39','40','41','42','43','44','45','46'], off:['45','46'], badge:'Édition limitée'},
-  goggles: {name:'Mirror Mask',  price:119, img:'img/g-goggles.jpg', th:'img/g-goggles.jpg', sub:'Masque de ski verre miroir', col:['#2b6fe0','#16181d'], sizes:['Taille unique'], off:[], badge:'Nouveau', pos:'50% 50%'},
-  balaB:   {name:'Cagoule Glace', price:89, img:'img/g-balaclava-blue.jpg', th:'img/g-balaclava-blue.jpg', sub:'Cagoule maille côtelée', col:['#4f7fc4'], sizes:['Taille unique'], off:[], badge:'', pos:'50% 40%'},
-  balaN:   {name:'Cagoule Nuit',  price:89, img:'img/g-balaclava-black.jpg', th:'img/g-balaclava-black.jpg', sub:'Cagoule maille noire', col:['#16181d'], sizes:['Taille unique'], off:[], badge:'', pos:'50% 40%'},
-  beanB:   {name:'Bonnet Crown Glace', price:69, img:'img/g-beanie-blue.jpg', th:'img/g-beanie-blue.jpg', sub:'Bonnet côtelé brodé couronne', col:['#4f7fc4','#16181d'], sizes:['Taille unique'], off:[], badge:'Nouveau', pos:'50% 50%'},
-  beanN:   {name:'Bonnet Crown Nuit', price:69, img:'img/g-beanie-black.jpg', th:'img/g-beanie-black.jpg', sub:'Bonnet côtelé brodé couronne', col:['#16181d','#4f7fc4'], sizes:['Taille unique'], off:[], badge:'', pos:'50% 50%'},
-  glovB:   {name:'Gants Crown Glace', price:59, img:'img/g-gloves-blue.jpg', th:'img/g-gloves-blue.jpg', sub:'Gants polaire tactiles', col:['#4f7fc4','#16181d'], sizes:['S/M','L/XL'], off:[], badge:'', pos:'50% 50%'},
-  glovN:   {name:'Gants Crown Nuit', price:59, img:'img/g-gloves-black.jpg', th:'img/g-gloves-black.jpg', sub:'Gants polaire tactiles', col:['#16181d','#4f7fc4'], sizes:['S/M','L/XL'], off:[], badge:'', pos:'50% 50%'},
-  mitts:   {name:'Moufles Frost', price:79, img:'img/g-mitts.jpg', th:'img/g-mitts.jpg', sub:'Moufles doudoune brillantes', col:['#9fb6d0'], sizes:['S/M','L/XL'], off:[], badge:'Nouveau', pos:'50% 50%'},
-  gaiter:  {name:'Tour de cou Nuit', price:39, img:'img/g-gaiter.jpg', th:'img/g-gaiter.jpg', sub:'Polaire douce, coupe haute', col:['#16181d'], sizes:['Taille unique'], off:[], badge:'', pos:'50% 50%'},
-  cargoG:  {name:'Cargo Brume', price:139, img:'img/g-cargo-grey.jpg', th:'img/g-cargo-grey.jpg', sub:'Cargo technique gris clair', col:['#c3c9d1'], sizes:['S','M','L','XL'], off:[], badge:'', pos:'50% 35%'},
-  drop:    {name:'Drop 01', price:0, cat:'', sub:'', col:[], sizes:[], off:[], link:'#shop', eye:'Glace & Nuit', tag:'Deux humeurs, une seule marque. Toute la collection hiver 26 est en ligne.', specs:'Doudounes · Ensembles · Accessoires · Livraison offerte dès 300 €', th:'img/noirtotal_t.jpg'},
-  cargoB:  {name:'Cargo Noir',   price:149, img:'img/cargo-black.jpg', th:'img/cargo-black.jpg', sub:'Cargo technique 6 poches', col:['#16181d'], sizes:['S','M','L','XL'], off:[], badge:''},
-  cargoI:  {name:'Cargo Glacier',price:159, img:'img/cargo-ice.jpg',   th:'img/cargo-ice.jpg',   sub:'Cargo verni bleu glacier', col:['#a9c0da'], sizes:['S','M','L','XL'], off:['S'], badge:'Nouveau'},
+  bootW:   {name:'Blizzard Boot Blanc', price:189, img:'boot-white.jpg', th:'boot-white.jpg', sub:'Boot cuir imperméable', col:['#f4f6f9','#1a1d22'], sizes:['39','40','41','42','43','44','45','46'], off:['39','46'], badge:'Nouveau'},
+  bootB:   {name:'Blizzard Boot Noir',  price:189, img:'boot-black.jpg', th:'boot-black.jpg', sub:'Boot cuir crantée', col:['#1a1d22','#f4f6f9'], sizes:['39','40','41','42','43','44','45','46'], off:[], badge:''},
+  bootC:   {name:'Blizzard Boot Cobalt',price:199, img:'boot-cobalt.jpg',th:'boot-cobalt.jpg',sub:'Boot nubuck bleu électrique', col:['#2547d0'], sizes:['39','40','41','42','43','44','45','46'], off:['45','46'], badge:'Édition limitée'},
+  goggles: {name:'Mirror Mask',  price:119, img:'g-goggles.jpg', th:'g-goggles.jpg', sub:'Masque de ski verre miroir', col:['#2b6fe0','#16181d'], sizes:['Taille unique'], off:[], badge:'Nouveau', pos:'50% 50%'},
+  balaB:   {name:'Cagoule Glace', price:89, img:'g-balaclava-blue.jpg', th:'g-balaclava-blue.jpg', sub:'Cagoule maille côtelée', col:['#4f7fc4'], sizes:['Taille unique'], off:[], badge:'', pos:'50% 40%'},
+  balaN:   {name:'Cagoule Nuit',  price:89, img:'g-balaclava-black.jpg', th:'g-balaclava-black.jpg', sub:'Cagoule maille noire', col:['#16181d'], sizes:['Taille unique'], off:[], badge:'', pos:'50% 40%'},
+  beanB:   {name:'Bonnet Crown Glace', price:69, img:'g-beanie-blue.jpg', th:'g-beanie-blue.jpg', sub:'Bonnet côtelé brodé couronne', col:['#4f7fc4','#16181d'], sizes:['Taille unique'], off:[], badge:'Nouveau', pos:'50% 50%'},
+  beanN:   {name:'Bonnet Crown Nuit', price:69, img:'g-beanie-black.jpg', th:'g-beanie-black.jpg', sub:'Bonnet côtelé brodé couronne', col:['#16181d','#4f7fc4'], sizes:['Taille unique'], off:[], badge:'', pos:'50% 50%'},
+  glovB:   {name:'Gants Crown Glace', price:59, img:'g-gloves-blue.jpg', th:'g-gloves-blue.jpg', sub:'Gants polaire tactiles', col:['#4f7fc4','#16181d'], sizes:['S/M','L/XL'], off:[], badge:'', pos:'50% 50%'},
+  glovN:   {name:'Gants Crown Nuit', price:59, img:'g-gloves-black.jpg', th:'g-gloves-black.jpg', sub:'Gants polaire tactiles', col:['#16181d','#4f7fc4'], sizes:['S/M','L/XL'], off:[], badge:'', pos:'50% 50%'},
+  mitts:   {name:'Moufles Frost', price:79, img:'g-mitts.jpg', th:'g-mitts.jpg', sub:'Moufles doudoune brillantes', col:['#9fb6d0'], sizes:['S/M','L/XL'], off:[], badge:'Nouveau', pos:'50% 50%'},
+  gaiter:  {name:'Tour de cou Nuit', price:39, img:'g-gaiter.jpg', th:'g-gaiter.jpg', sub:'Polaire douce, coupe haute', col:['#16181d'], sizes:['Taille unique'], off:[], badge:'', pos:'50% 50%'},
+  cargoG:  {name:'Cargo Brume', price:139, img:'g-cargo-grey.jpg', th:'g-cargo-grey.jpg', sub:'Cargo technique gris clair', col:['#c3c9d1'], sizes:['S','M','L','XL'], off:[], badge:'', pos:'50% 35%'},
+  drop:    {name:'Drop 01', price:0, cat:'', sub:'', col:[], sizes:[], off:[], link:'#shop', eye:'Glace & Nuit', tag:'Deux humeurs, une seule marque. Toute la collection hiver 26 est en ligne.', specs:'Doudounes · Ensembles · Accessoires · Livraison offerte dès 300 €', th:'noirtotal_t.jpg'},
+  cargoB:  {name:'Cargo Noir',   price:149, img:'cargo-black.jpg', th:'cargo-black.jpg', sub:'Cargo technique 6 poches', col:['#16181d'], sizes:['S','M','L','XL'], off:[], badge:''},
+  cargoI:  {name:'Cargo Glacier',price:159, img:'cargo-ice.jpg',   th:'cargo-ice.jpg',   sub:'Cargo verni bleu glacier', col:['#a9c0da'], sizes:['S','M','L','XL'], off:['S'], badge:'Nouveau'},
 };
 const HERO=['frost','noir','drop'];
-const SLIDE={frost:{wide:'img/hero-frost.jpg',tall:'img/frost.jpg',pos:'50% 30%'},noir:{wide:'img/hero-noir.jpg',tall:'img/noir.jpg',pos:'50% 30%'},drop:{wide:'img/hero-duo.jpg',tall:'img/glacier.jpg',pos:'50% 35%'}};
+const SLIDE={frost:{wide:'hero-frost.jpg',tall:'frost.jpg',pos:'50% 30%'},noir:{wide:'hero-noir.jpg',tall:'noir.jpg',pos:'50% 30%'},drop:{wide:'hero-duo.jpg',tall:'glacier.jpg',pos:'50% 35%'}};
 const SHOP=['frost','cobalt','ash','noirtotal','noir','whiteout','teddy','skybib'];
 const GEAR=['goggles','beanB','beanN','balaB','balaN','glovB','glovN','mitts','gaiter','bootW','bootB','bootC','cargoB','cargoI','cargoG'];
 const LOOKS=[{id:'noirtotal',items:['noir','cargoB','bootB'],label:'Look 01 · Nuit'},{id:'glacier',items:['frost','cargoI','bootW'],label:'Look 02 · Glace'},{id:'cobalt',items:['cobalt','bootC'],label:'Look 03 · Électrique'},{id:'teddy',items:['teddy'],label:'Look 04 · Polaire'}];
