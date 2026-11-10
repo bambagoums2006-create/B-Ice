@@ -110,7 +110,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* ---------- section heads ---------- */
 .sec{padding-block:clamp(56px,8vw,110px)}
 .sh{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
-.sh h2{font-size:clamp(52px,8vw,112px)}
+.sh h2{font-size:clamp(52px,8vw,112px);margin:0}
+.sh p{margin:0}
 .sh p{max-width:38ch;color:var(--steel)}
 .chip{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;background:var(--ink);color:var(--frost);font-size:13px;font-weight:500;text-decoration:none}
 
@@ -349,12 +350,17 @@ legend{font-family:var(--f-display);font-weight:800;font-size:22px;text-transfor
 }
 @media (max-width:760px){
   .nav{display:none}
-  .stage-in{padding-block:120px 70px;gap:20px}
+  .stage-in{padding-block:120px 64px;gap:16px}
+  .specs{display:none}
+  .eyebrow{font-size:10px;gap:8px}
+  .p-name{font-size:clamp(52px,15vw,76px)}
+  .hot .pin{display:none}
+  .sh{margin-bottom:24px;gap:14px}
   .s-left{gap:16px}
   .p-tag{display:none}
   .s-right{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
   .s-right .cw{flex:0 0 auto}
-  .scrim{background:linear-gradient(0deg,rgba(8,14,26,.85) 0%,rgba(8,14,26,.35) 55%,rgba(8,14,26,.4) 100%)}
+  .scrim{background:linear-gradient(0deg,rgba(8,14,26,.9) 0%,rgba(8,14,26,.6) 34%,rgba(8,14,26,0) 62%,rgba(8,14,26,.35) 100%)}
   .hot{aspect-ratio:auto;max-height:none;display:flex;flex-direction:column}
   .hot>img{position:relative;aspect-ratio:1672/941;height:auto}
   .tech-copy,.stats{position:static;width:auto;padding:28px 16px 0}
@@ -382,6 +388,7 @@ legend{font-family:var(--f-display);font-weight:800;font-size:22px;text-transfor
 </style>
 </head>
 <body>
+
 
 <header class="hdr" id="hdr">
   <div class="hdr-in">
@@ -514,7 +521,7 @@ legend{font-family:var(--f-display);font-weight:800;font-size:22px;text-transfor
       </div>
       <form class="nl" id="nl" novalidate>
         <label for="nlMail" class="mono" style="position:absolute;left:-9999px">Ton e-mail</label>
-        <input id="nlMail" type="email" placeholder="Inscriptions fermées · site démo" disabled>
+        <input id="nlMail" type="email" placeholder="Site démo · fermé" disabled>
         <button type="submit" disabled style="opacity:.5;cursor:not-allowed">Me prévenir</button>
       </form>
       <p class="nl-ok" id="nlOk" hidden></p>
@@ -858,5 +865,6 @@ rs();addEventListener('resize',rs);
 
 renderCart();
 </script>
+
 </body>
 </html>
